@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Цены на кварцевый песок | ТехноКварц</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;700;800&family=Roboto+Condensed:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/catalog.css" />
+    <link rel="stylesheet" href="css/prices.css" />
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <!-- <header class="header">
+      <div class="header__top">
+        <div class="container header__top-inner">
+          <a href="index.html" class="logo"
+            ><img src="img/logo.png" alt="ТехноКварц" width="160" height="46"
+          /></a>
+
+          <div class="location">
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+              <path
+                d="M8 0C3.6 0 0 3.6 0 8c0 5.5 7 11.5 7.3 11.8.2.1.5.1.7 0C8.3 19.5 15.3 13.5 15.3 8c0-4.4-3.6-8-7.3-8zm0 11a3 3 0 110-6 3 3 0 010 6z"
+                fill="#A3A3A3"
+              />
+            </svg>
+            <span>Санкт-Петербург</span>
+          </div>
+
+          <div class="header__phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6.6 10.8c1.3 2.6 3.4 4.7 6 6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1l-2 2.3z"
+                fill="#393938"
+              />
+            </svg>
+            <span>8 (473) 250-46-05</span>
+          </div>
+
+          <button class="btn btn--outline-dark header__callback">
+            Обратный звонок
+          </button>
+
+          <div class="social">
+            <a href="#" aria-label="Почта" class="social__item"
+              ><svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                <path
+                  d="M1 1h16v12H1z"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                />
+                <path
+                  d="M1 1l8 7 8-7"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="ВКонтакте" class="social__item"
+              ><svg width="18" height="12" viewBox="0 0 24 14" fill="none">
+                <path
+                  d="M13 14C4 14 0 8 0 0h3.6c0 5.8 2.6 8.3 4.5 8.8V0h3.4v5.5C13.4 5.2 15.4 2.8 16 0h3.4c-.5 3-2.8 5.4-4.4 6.4 1.6.8 4.2 2.9 5 7.6h-3.7c-.6-2.7-2.4-4.7-5-5v5H13z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="social__item"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1120.2 12 8.2 8.2 0 0112 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .2-1.1-.1-.1-.3-.2-.5-.3z"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="Telegram" class="social__item"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M21.6 3.5L2.9 10.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.9L23.9 4.9c.3-1.4-.5-2-2.3-1.4zM8.4 13.3l10-6.3c.5-.3.9-.1.5.2l-8.4 7.6-.3 3.4-1.8-4.9z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <div class="container header__bottom-inner">
+          <button class="search-btn" aria-label="Поиск">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+                stroke="#393938"
+                stroke-width="1.8"
+              />
+              <path
+                d="M21 21l-4.3-4.3"
+                stroke="#393938"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <a href="gravel.html" class="btn btn--catalog">
+            Каталог
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+              <path
+                d="M1 1l5 5 5-5"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+          <nav class="main-nav">
+            <a href="prices.html" class="is-active">Цены</a>
+            <a href="#">Производство</a>
+            <a href="#">Доставка</a>
+            <a href="#">Как купить</a>
+            <a href="#">О компании</a>
+            <a href="#">Контакты</a>
+          </nav>
+        </div>
+      </div>
+    </header> -->
+
+    <!-- ===================== BREADCRUMBS + TITLE ===================== -->
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <a href="index.html">Главная</a> <span>/</span> <span>Цены</span>
+        </nav>
+        <h1 class="page-head__title">
+          Цены на <span class="c-orange">кварцевый песок</span>
+        </h1>
+        <p class="page-head__subtitle">
+          На сайте указаны действующие розничные цены при условии самовывоза с
+          завода в Воронеже от 1 тонны. Цены в других городах уточняйте у наших
+          менеджеров.
+        </p>
+      </div>
+    </div>
+
+    <!-- ===================== PACKAGING COMPARISON ===================== -->
+    <section class="container section">
+      <div class="price-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M6 3h8a5 5 0 010 10H9m-3 8V3m0 8h8"
+            stroke="#FF9F0F"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Стоимость зависит от фасовки
+      </div>
+
+      <div class="pack-grid">
+        <article class="pack-card">
+          <img src="img/price-bags-25kg.jpg" alt="Фасовка в мешки по 25 кг" />
+          <h3>Фасовка в мешки по 25 кг</h3>
+          <p class="pack-card__desc">
+            Рекомендуется для производств без возможности разгрузки и хранения
+            МКР (1000 кг)
+          </p>
+          <div class="pack-card__divider"></div>
+          <div class="pack-card__pros">
+            <span class="pack-card__mark pack-card__mark--plus">+</span>
+            <div>
+              <b class="pack-card__mark--orange">Плюсы:</b>
+              <p>
+                Простота разгрузки, партия от 1 тонны (40 мешков по 25 кг),
+                возможен индивидуальный дизайн упаковки
+              </p>
+            </div>
+          </div>
+          <div class="pack-card__pros">
+            <span class="pack-card__mark pack-card__mark--minus">–</span>
+            <div>
+              <b>Минусы:</b>
+              <p>Цена выше чем в МКР (1000 кг)</p>
+            </div>
+          </div>
+          <div class="pack-card__divider"></div>
+          <p class="pack-card__note">
+            На сайте указаны цены в фасовке по 25кг, на самовывоз с нашего
+            завода, от 1тонны
+          </p>
+        </article>
+
+        <article class="pack-card">
+          <img
+            src="img/price-bags-1000kg.jpg"
+            alt="Фасовка в МКР (биг-бэг) по 1000 кг"
+          />
+          <h3>Фасовка в МКР (биг-бэг) по 1000 кг</h3>
+          <p class="pack-card__desc">
+            Рекомендуется для производств с возможностью разгрузки и хранения
+            МКР (1000 кг)
+          </p>
+          <div class="pack-card__divider"></div>
+          <div class="pack-card__pros">
+            <span class="pack-card__mark pack-card__mark--plus">+</span>
+            <div>
+              <b class="pack-card__mark--orange">Плюсы:</b>
+              <p>
+                Цена значительно ниже чем в мелкой фасовке, можно хранить на
+                улице
+              </p>
+            </div>
+          </div>
+          <div class="pack-card__pros">
+            <span class="pack-card__mark pack-card__mark--minus">–</span>
+            <div>
+              <b>Минусы:</b>
+              <p>Для разгрузки нужна спец техника</p>
+            </div>
+          </div>
+          <div class="pack-card__divider"></div>
+          <p class="pack-card__note">
+            Нажмите кнопку ниже и получите индивидуальное коммерческое
+            предложение.
+          </p>
+        </article>
+      </div>
+
+      <div class="pack-actions">
+        <a href="#" class="btn btn--orange pack-actions__btn"
+          >Купить в розницу у дилера (от 1 мешка)</a
+        >
+        <a href="#" class="btn btn--orange pack-actions__btn"
+          >Купить оптом у завода (от 1 тонны)</a
+        >
+      </div>
+      <p class="pack-footnote">
+        Возможна поставка песка в упаковке с логотипом и информацией Покупателя
+      </p>
+    </section>
+
+    <!-- ===================== TERMS TIMELINE ===================== -->
+    <section class="container section terms">
+      <h2 class="terms__title">
+        Прозрачные <span class="c-orange">условия работы</span>
+      </h2>
+      <p class="terms__subtitle">Делаем сотрудничество удобным и выгодным</p>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 3h8a5 5 0 010 10H9m-3 8V3m0 8h8"
+              stroke="#FF9F0F"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div>
+            <h3>Актуальные розничные цены</h3>
+            <p>
+              На сайте указаны действующие цены при условии самовывоза с завода
+              в Воронеже от 1 тонны
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4 21V5l8-3 8 3v16M4 21h16M9 21v-6h6v6M9 9h1M14 9h1M9 13h1M14 13h1"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div>
+            <h3>Без посредников</h3>
+            <p>
+              Мы — производители. Приобретая товары у нас, вы не переплачиваете
+              посредникам
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M9 18h6M10 22h4M12 2a6 6 0 00-3.5 10.9c.3.3.5.7.5 1.1v1h6v-1c0-.4.2-.8.5-1.1A6 6 0 0012 2z"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div>
+            <h3>Собственные разработки</h3>
+            <p>
+              Наши фракции и грансостав разработаны специально под пескоструйные
+              работы и водоподготовку
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <rect
+              x="2"
+              y="5"
+              width="20"
+              height="14"
+              rx="2"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+            />
+            <path
+              d="M2 10h20M6 15h4"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+          </svg>
+          <div>
+            <h3>Удобная оплата</h3>
+            <p>Наличный и безналичный расчет — выбирайте удобный способ</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <rect
+              x="3"
+              y="4"
+              width="18"
+              height="17"
+              rx="2"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+            />
+            <path
+              d="M3 9h18M8 2v4M16 2v4"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+          </svg>
+          <div>
+            <h3>Рассрочка оплаты</h3>
+            <p>Для постоянных покупателей предоставляем рассрочку</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 2l9 5v10l-9 5-9-5V7z"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3 7l9 5 9-5M12 12v10"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div>
+            <h3>Любые объемы</h3>
+            <p>Работаем как с небольшими заказами, так и с крупными партиями</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 2l3 6.5 7 1-5.2 5 1.3 7L12 18l-6.1 3.5 1.3-7-5.2-5 7-1z"
+              stroke="#FF9F0F"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div>
+            <h3>Индивидуальные условия</h3>
+            <p>
+              Для постоянных покупателей закрепляем персональные цены на
+              самовывоз и доставку
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SUPPLY / DELIVERY NOTE ===================== -->
+    <section class="container section">
+      <div class="supply-box">
+        <div class="supply-box__item">
+          <h3><span class="supply-box__dot"></span>Поставка:</h3>
+          <p>
+            Биг-бэг (МКР) отгружаем во все виды транспорта, при этом в крытые
+            машины отгрузка производится только на евро поддонах. Допустима
+            сборная поставка, когда в одну машину грузиться несколько фракций
+          </p>
+          <p>
+            МФ (25кг) поставляется исключительно на евро поддонах. Только
+            монопаллеты. Каждая паллета включает 40 шт (МФ 25кг), весит 1000кг,
+            и маркируется с 4-х сторон. Допустима сборная поставка, когда в одну
+            машину грузиться несколько монопаллет с различными фракциями.
+          </p>
+        </div>
+        <div class="supply-box__item">
+          <h3><span class="supply-box__dot"></span>Доставка:</h3>
+          <p>Доставляем авто и ж/д транспортом по России.</p>
+        </div>
+        <div class="supply-box__note">
+          *Цены, указанные на сайте, могут быть изменены. Всю подробную и
+          актуальную информацию вы можете получить у наших менеджеров
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <!-- <footer class="footer">
+      <div class="footer__map-wrap">
+        <div id="footerMap" class="footer__map"></div>
+        <div class="footer__map-panel">
+          <div class="footer__map-office">
+            <div class="footer__map-office__title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 22s7-7.4 7-12.5A7 7 0 0012 2a7 7 0 00-7 7.5C5 14.6 12 22 12 22z"
+                  stroke="#fff"
+                  stroke-width="1.6"
+                />
+                <circle
+                  cx="12"
+                  cy="9.5"
+                  r="2.5"
+                  stroke="#fff"
+                  stroke-width="1.6"
+                /></svg
+              >Московский офис
+            </div>
+            <p>Мытищенский район, деревня Сухарево д.140, стр. 14</p>
+            <p class="footer__map-office__phone">8 (473) 211-63-38</p>
+            <p>
+              <span class="footer__map-office__badge">ПН-ВС</span> с 8:00 до
+              18:00
+            </p>
+          </div>
+          <div class="footer__map-office">
+            <div class="footer__map-office__title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 22s7-7.4 7-12.5A7 7 0 0012 2a7 7 0 00-7 7.5C5 14.6 12 22 12 22z"
+                  stroke="#fff"
+                  stroke-width="1.6"
+                />
+                <circle
+                  cx="12"
+                  cy="9.5"
+                  r="2.5"
+                  stroke="#fff"
+                  stroke-width="1.6"
+                /></svg
+              >Завод
+            </div>
+            <p>г. Воронеж, рабочий поселок Латная, ул. Строителей 8</p>
+            <p>Отгрузка: ПН-ПТ с 9:00 до 17:00, СБ с 8:00 до 12:00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__body">
+        <div class="container footer__inner">
+          <a href="index.html" class="logo"
+            ><img
+              src="img/logo-footer.png"
+              alt="ТехноКварц"
+              width="240"
+              height="69"
+          /></a>
+
+          <div class="footer__phone">
+            <span>8 (473) 250-46-05</span>
+          </div>
+
+          <button class="btn btn--orange-outline footer__callback">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6.6 10.8c1.3 2.6 3.4 4.7 6 6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1l-2 2.3z"
+                fill="currentColor"
+              />
+            </svg>
+            Обратный звонок
+          </button>
+
+          <div class="social footer__social">
+            <a href="#" aria-label="Почта" class="social__item"
+              ><svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                <path
+                  d="M1 1h16v12H1z"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                />
+                <path
+                  d="M1 1l8 7 8-7"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                /></svg
+            ></a>
+            <a href="#" aria-label="ВКонтакте" class="social__item"
+              ><svg width="18" height="12" viewBox="0 0 24 14" fill="none">
+                <path
+                  d="M13 14C4 14 0 8 0 0h3.6c0 5.8 2.6 8.3 4.5 8.8V0h3.4v5.5C13.4 5.2 15.4 2.8 16 0h3.4c-.5 3-2.8 5.4-4.4 6.4 1.6.8 4.2 2.9 5 7.6h-3.7c-.6-2.7-2.4-4.7-5-5v5H13z"
+                  fill="currentColor"
+                /></svg
+            ></a>
+            <a href="#" aria-label="WhatsApp" class="social__item"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1120.2 12 8.2 8.2 0 0112 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .2-1.1-.1-.1-.3-.2-.5-.3z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="Telegram" class="social__item"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M21.6 3.5L2.9 10.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.9L23.9 4.9c.3-1.4-.5-2-2.3-1.4zM8.4 13.3l10-6.3c.5-.3.9-.1.5.2l-8.4 7.6-.3 3.4-1.8-4.9z"
+                /></svg
+            ></a>
+          </div>
+
+          <div class="footer__nav">
+            <div class="footer__nav-col footer__nav-col--brand">
+              <h4>Навигация</h4>
+              <p>
+                Кварцевый песок от производителя, по ГОСТУ: фракции 0,1–5 мм
+              </p>
+            </div>
+            <div class="footer__nav-col">
+              <h4>Каталог</h4>
+              <a href="#">Кварцевый песок</a>
+              <a href="gravel.html">Кварцевый гравий</a>
+              <a href="#">Фракции кварцевого песка</a>
+              <a href="#">Песок строительный</a>
+              <a href="#">Холодный асфальт</a>
+            </div>
+            <div class="footer__nav-col">
+              <h4>Правовая информация</h4>
+              <a href="#">FAQ</a>
+              <a href="#">Сертификаты</a>
+              <a href="#">Отзывы</a>
+              <a href="#">Инновации</a>
+              <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="footer__nav-col">
+              <h4>Разделы сайта</h4>
+              <a href="prices.html">Цены</a>
+              <a href="#">Производство</a>
+              <a href="#">Доставка</a>
+              <a href="#">О компании</a>
+              <a href="#">Контакты</a>
+            </div>
+          </div>
+
+          <div class="footer__bottom-line"></div>
+          <p class="footer__copy">© 2026 ТД ТехноКварц. Все права защищены</p>
+        </div>
+      </div>
+    </footer> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ТехноКварц — кварцевый песок от производителя</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;700;800&family=Roboto+Condensed:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <!-- <header class="header">
+  <div class="header__top">
+    <div class="container header__top-inner">
+      <a href="index.html" class="logo"><img src="img/logo.png" alt="ТехноКварц" width="160" height="46"></a>
+
+      <div class="location">
+        <svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 0C3.6 0 0 3.6 0 8c0 5.5 7 11.5 7.3 11.8.2.1.5.1.7 0C8.3 19.5 15.3 13.5 15.3 8c0-4.4-3.6-8-7.3-8zm0 11a3 3 0 110-6 3 3 0 010 6z" fill="#A3A3A3"/></svg>
+        <span>Санкт-Петербург</span>
+      </div>
+
+      <div class="header__phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.3 2.6 3.4 4.7 6 6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1l-2 2.3z" fill="#393938"/></svg>
+        <span>8 (473) 250-46-05</span>
+      </div>
+
+      <button class="btn btn--outline-dark header__callback">Обратный звонок</button>
+
+      <div class="social">
+        <a href="#" aria-label="Почта" class="social__item"><svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 1h16v12H1z" stroke="currentColor" stroke-width="1.3"/><path d="M1 1l8 7 8-7" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        <a href="#" aria-label="ВКонтакте" class="social__item"><svg width="18" height="12" viewBox="0 0 24 14" fill="none"><path d="M13 14C4 14 0 8 0 0h3.6c0 5.8 2.6 8.3 4.5 8.8V0h3.4v5.5C13.4 5.2 15.4 2.8 16 0h3.4c-.5 3-2.8 5.4-4.4 6.4 1.6.8 4.2 2.9 5 7.6h-3.7c-.6-2.7-2.4-4.7-5-5v5H13z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="WhatsApp" class="social__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1120.2 12 8.2 8.2 0 0112 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .2-1.1-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        <a href="#" aria-label="Telegram" class="social__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 3.5L2.9 10.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.9L23.9 4.9c.3-1.4-.5-2-2.3-1.4zM8.4 13.3l10-6.3c.5-.3.9-.1.5.2l-8.4 7.6-.3 3.4-1.8-4.9z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container header__bottom-inner">
+      <button class="search-btn" aria-label="Поиск">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#393938" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="#393938" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <a href="gravel.html" class="btn btn--catalog">
+        Каталог
+        <svg width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </a>
+      <nav class="main-nav">
+        <a href="prices.html">Цены</a>
+        <a href="#">Производство</a>
+        <a href="#">Доставка</a>
+        <a href="#">Как купить</a>
+        <a href="#">О компании</a>
+        <a href="#">Контакты</a>
+      </nav>
+    </div>
+  </div>
+</header> -->
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <img src="img/hero-bg.jpg" alt="" class="hero__bg" />
+      <div class="hero__overlay"></div>
+      <div class="container hero__inner">
+        <h1 class="hero__title">
+          Кварцевый песок
+          <span class="c-orange">от производителя,&nbsp;по ГОСТУ:</span> фракции
+          0,1–5&nbsp;мм
+        </h1>
+
+        <div class="hero__features">
+          <div class="hero__feature">
+            <img src="img/hero-icon-delivery.png" alt="" />
+            <span>Доставка по России</span>
+          </div>
+          <div class="hero__feature">
+            <img src="img/hero-icon-guarantee.png" alt="" />
+            <span>Гарантия: 100%</span>
+          </div>
+          <div class="hero__feature">
+            <img src="img/hero-icon-return.png" alt="" />
+            <span>Возврат при несоответствии фракционного состава</span>
+          </div>
+          <a href="#" class="btn btn--orange hero__cta">
+            Сделать заказ
+            <span class="btn__circle"
+              ><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M2 12L12 2M4 2h8v8"
+                  stroke="#FF9F0F"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CATALOG ===================== -->
+    <section class="catalog container section">
+      <div class="section__head">
+        <h2 class="section__title">
+          Наша <span class="c-orange">продукция</span>
+        </h2>
+        <a href="gravel.html" class="link-arrow"
+          >Смотреть каталог
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path
+              d="M2 12L12 2M4 2h8v8"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            /></svg
+        ></a>
+      </div>
+
+      <div class="catalog__grid">
+        <article class="product-card">
+          <a href="product.html?id=0.10-0.63" class="product-card__link">
+            <img src="img/product-sand.jpg" alt="Кварцевый песок" />
+            <h3>Кварцевый песок</h3>
+          </a>
+          <div class="product-card__actions">
+            <a href="product.html?id=0.10-0.63" class="btn btn--orange btn--sm"
+              >Подробнее
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M2 12L12 2M4 2h8v8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg
+            ></a>
+            <a
+              href="product.html?id=0.10-0.63"
+              class="btn btn--orange-outline btn--sm"
+              >Заказать</a
+            >
+          </div>
+        </article>
+        <article class="product-card">
+          <a href="gravel.html" class="product-card__link">
+            <img src="img/product-gravel.jpg" alt="Кварцевый гравий" />
+            <h3>Кварцевый гравий</h3>
+          </a>
+          <div class="product-card__actions">
+            <a href="gravel.html" class="btn btn--orange btn--sm"
+              >Подробнее
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M2 12L12 2M4 2h8v8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg
+            ></a>
+            <a href="gravel.html" class="btn btn--orange-outline btn--sm"
+              >Заказать</a
+            >
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="img/product-building-sand.jpg" alt="Песок строительный" />
+          <h3>Песок строительный</h3>
+          <div class="product-card__actions">
+            <a href="#" class="btn btn--orange btn--sm"
+              >Подробнее
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M2 12L12 2M4 2h8v8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg
+            ></a>
+            <a href="#" class="btn btn--orange-outline btn--sm">Заказать</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="img/product-asphalt.jpg" alt="Холодный асфальт" />
+          <h3>Холодный асфальт</h3>
+          <div class="product-card__actions">
+            <a href="#" class="btn btn--orange btn--sm"
+              >Подробнее
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M2 12L12 2M4 2h8v8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg
+            ></a>
+            <a href="#" class="btn btn--orange-outline btn--sm">Заказать</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== ADVANTAGES ===================== -->
+    <section class="advantages">
+      <img src="img/advantages-bg.jpg" alt="" class="advantages__bg" />
+      <div class="advantages__overlay"></div>
+      <div class="container advantages__inner">
+        <h2 class="advantages__title">
+          <span class="c-orange">Гарантируем 100% возврат денег</span> при
+          несоответствии нашего песка заявленному качеству
+        </h2>
+
+        <div class="advantages__divider"></div>
+
+        <div class="advantages__stats">
+          <div class="stat">
+            <div class="stat__num">&gt; 212000 тонн</div>
+            <p>
+              Cухого фракционированного песка произведено и отправлено нашим
+              клиентам
+            </p>
+          </div>
+          <div class="stat">
+            <div class="stat__num">ГОСТ</div>
+            <p>Производим только по ГОСТ 51641 2000</p>
+          </div>
+          <div class="stat">
+            <div class="stat__num">ПОСТОРОННИЕ</div>
+            <p>Примеси отсутствуют</p>
+          </div>
+          <div class="stat">
+            <div class="stat__num">КАЧЕСТВО</div>
+            <p>Сертифицированно для систем фильтрации питьевой воды</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CATEGORIES ===================== -->
+    <section class="categories container section">
+      <h2 class="section__title">
+        Категории <span class="c-orange">товаров</span>
+      </h2>
+
+      <div class="categories__grid">
+        <article class="cat-card">
+          <img src="img/cat-sandblast.jpg" alt="" />
+          <h3>Для пескоструйных работ</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+        <article class="cat-card">
+          <img src="img/cat-pool-filter.jpg" alt="" />
+          <h3>Для фильтров в бассейн и водоподготовки</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+        <article class="cat-card">
+          <img src="img/cat-water-canal.jpg" alt="" />
+          <h3>Для водоканалов</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+        <article class="cat-card">
+          <img src="img/cat-aquarium.jpg" alt="" />
+          <h3>Для аквариумов и газонов</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+
+        <article class="cat-card">
+          <img src="img/cat-floor.jpg" alt="" />
+          <h3>Для наливных полов</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+        <article class="cat-card">
+          <img src="img/cat-sport.jpg" alt="" />
+          <h3>Для спортивных площадок</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+        <article class="cat-card">
+          <img src="img/cat-pavement.jpg" alt="" />
+          <h3>Для тротуарной плитки</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+        <article class="cat-card">
+          <img src="img/cat-metal-casting.jpg" alt="" />
+          <h3>Для формовки и литья различных металлов</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+
+        <article class="cat-card">
+          <img src="img/cat-decor.jpg" alt="" />
+          <h3>Для декоративных изделий</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+        <article class="cat-card">
+          <img src="img/cat-asphalt.jpg" alt="" />
+          <h3>Холодный асфальт</h3>
+          <a href="#" class="btn btn--orange btn--sm"
+            >Подробнее
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATES ===================== -->
+    <section class="certificates">
+      <img src="img/cert-bg.jpg" alt="" class="certificates__bg" />
+      <div class="container certificates__inner">
+        <div class="cert-slider">
+          <button
+            class="cert-slider__arrow cert-slider__arrow--prev"
+            aria-label="Назад"
+          >
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
+              <path
+                d="M9 1L2 8l7 7"
+                stroke="#fff"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="cert-slider__cards" data-cert-slider>
+            <img src="img/cert-1.jpg" alt="Сертификат" class="cert-card" />
+            <img src="img/cert-2.jpg" alt="Сертификат" class="cert-card" />
+            <img src="img/cert-3.jpg" alt="Сертификат" class="cert-card" />
+          </div>
+          <button
+            class="cert-slider__arrow cert-slider__arrow--next"
+            aria-label="Вперед"
+          >
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
+              <path
+                d="M1 1l7 7-7 7"
+                stroke="#fff"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="certificates__text">
+          <h2>Сертифицировано<br /><span class="c-orange">и одобрено</span></h2>
+          <p>
+            Каждый этап производства контролируется, а качество подтверждается
+            документально.
+          </p>
+          <a href="#" class="btn btn--orange-outline"
+            >Смотреть всё
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 12L12 2M4 2h8v8"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DELIVERY ===================== -->
+    <section class="delivery container section">
+      <img
+        src="img/delivery.jpg"
+        alt="Производство и доставка нерудного материала по всей России"
+      />
+    </section>
+
+    <!-- ===================== ORDER CTA ===================== -->
+    <section class="order-cta">
+      <img
+        src="img/order-pile-left.jpg"
+        alt=""
+        class="order-cta__pile order-cta__pile--left"
+      />
+      <img
+        src="img/order-pile-right.jpg"
+        alt=""
+        class="order-cta__pile order-cta__pile--right"
+      />
+      <div class="container order-cta__inner">
+        <h2>Заказать доставку песка</h2>
+        <form class="order-cta__form">
+          <input type="text" placeholder="Ваше имя" required />
+          <input type="tel" placeholder="+7 (___) ___-__-__" required />
+          <button type="submit">Отправить</button>
+        </form>
+        <label class="order-cta__consent">
+          <input type="checkbox" checked />
+          <span
+            >Принимаю условия
+            <a href="#">Политики в отношении обработки персональных данных</a> и
+            даю <a href="#">Согласие на обработку персональных данных</a></span
+          >
+        </label>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq container section">
+      <h2 class="section__title c-orange-tail">
+        Ответы на <span class="c-orange">вопросы</span>
+      </h2>
+
+      <div class="faq__body">
+        <div class="faq__list">
+          <div class="faq__tabs">
+            <button class="faq__tab">Общие вопросы</button>
+            <button class="faq__tab is-active">Применение</button>
+            <button class="faq__tab">Как купить?</button>
+            <button class="faq__tab">Доставка</button>
+            <button class="faq__tab">Упаковка</button>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion__item is-open">
+              <button class="accordion__head">
+                У вас есть окатанный песок для цементного/бетонного/полимерного
+                пола?<svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                  <path
+                    d="M1 1l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="accordion__body">
+                <p>
+                  Да, для промышленных полов мы предлагаем окатанный кварцевый
+                  песок нужной фракции — уточните параметры у менеджера.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__head">
+                У Вас есть белый песок для пляжа?<svg
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="accordion__body">
+                <p>
+                  Да, в ассортименте есть светлый декоративный кварцевый песок
+                  для пляжных зон.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__head">
+                Ваш песок подходит для детских песочниц?<svg
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="accordion__body">
+                <p>
+                  Да, песок проходит контроль качества и безопасен для детских
+                  площадок.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__head">
+                Какой песок взять для разрыхления почвы на даче?<svg
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="accordion__body">
+                <p>
+                  Рекомендуем строительный песок средней фракции для улучшения
+                  структуры почвы.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__head">
+                Какой песок взять для пескоструйных работ?<svg
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="accordion__body">
+                <p>
+                  Для пескоструйных работ подходит кварцевый песок фракции 0,1–5
+                  мм — смотрите раздел «Каталог».
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__head">
+                Какой песок купить для бассейна?<svg
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="accordion__body">
+                <p>
+                  Для фильтров бассейнов и систем водоподготовки используется
+                  кварцевый песок нужного класса фракции.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__card">
+          <div class="faq__card-content">
+            <h3>У вас остались<br />вопросы?</h3>
+            <p>Закажите обратный звонок либо позвоните нам:</p>
+            <div class="faq__card-phone">8 (473) 211-63-38</div>
+            <button class="btn btn--orange-outline btn--white-bg">
+              Заказать обр звонок
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M2 12L12 2M4 2h8v8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <img src="img/faq-worker.png" alt="" class="faq__card-photo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SEO BLOCK ===================== -->
+    <section class="seo container section js-expand">
+      <img
+        src="img/seo-photo.jpg"
+        alt="Производство ТехноКварц"
+        class="seo__photo"
+      />
+      <div class="seo__text">
+        <h2>
+          Надежный поставщик<br /><span class="c-orange"
+            >нерудных материалов</span
+          >
+        </h2>
+        <p class="seo__paragraph">
+          Торговый дом «ТехноКварц» предлагает вам купить кварцевый песок в
+          оптом и розницу, предоставляя высококачественный продукт для различных
+          отраслей. Мы предлагаем широкий ассортимент кварцевого песка и
+          сосредоточены на
+          <span class="seo__more"
+            >потребностях каждого клиента, обеспечивая своевременную доставку и
+            гибкие условия сотрудничества по всей России.</span
+          >
+        </p>
+        <button class="seo__toggle">
+          Развернуть
+          <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+            <path
+              d="M1 1l5 5 5-5"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <!-- <footer class="footer">
+  <div class="footer__map-wrap">
+    <div id="footerMap" class="footer__map"></div>
+    <div class="footer__map-panel">
+      <div class="footer__map-office">
+        <div class="footer__map-office__title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-7.4 7-12.5A7 7 0 0012 2a7 7 0 00-7 7.5C5 14.6 12 22 12 22z" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.5" stroke="#fff" stroke-width="1.6"/></svg>Московский офис</div>
+        <p>Мытищенский район, деревня Сухарево д.140, стр. 14</p>
+        <p class="footer__map-office__phone">8 (473) 211-63-38</p>
+        <p><span class="footer__map-office__badge">ПН-ВС</span> с 8:00 до 18:00</p>
+      </div>
+      <div class="footer__map-office">
+        <div class="footer__map-office__title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-7.4 7-12.5A7 7 0 0012 2a7 7 0 00-7 7.5C5 14.6 12 22 12 22z" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.5" stroke="#fff" stroke-width="1.6"/></svg>Завод</div>
+        <p>г. Воронеж, рабочий поселок Латная, ул. Строителей 8</p>
+        <p>Отгрузка: ПН-ПТ с 9:00 до 17:00, СБ с 8:00 до 12:00</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__body">
+    <div class="container footer__inner">
+      <a href="index.html" class="logo"><img src="img/logo-footer.png" alt="ТехноКварц" width="240" height="69"></a>
+
+      <div class="footer__phone">
+        <span>8 (473) 250-46-05</span>
+      </div>
+
+      <button class="btn btn--orange-outline footer__callback">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.3 2.6 3.4 4.7 6 6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1l-2 2.3z" fill="currentColor"/></svg>
+        Обратный звонок
+      </button>
+
+      <div class="social footer__social">
+        <a href="#" aria-label="Почта" class="social__item"><svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 1h16v12H1z" stroke="currentColor" stroke-width="1.3"/><path d="M1 1l8 7 8-7" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        <a href="#" aria-label="ВКонтакте" class="social__item"><svg width="18" height="12" viewBox="0 0 24 14" fill="none"><path d="M13 14C4 14 0 8 0 0h3.6c0 5.8 2.6 8.3 4.5 8.8V0h3.4v5.5C13.4 5.2 15.4 2.8 16 0h3.4c-.5 3-2.8 5.4-4.4 6.4 1.6.8 4.2 2.9 5 7.6h-3.7c-.6-2.7-2.4-4.7-5-5v5H13z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="WhatsApp" class="social__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1120.2 12 8.2 8.2 0 0112 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .2-1.1-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        <a href="#" aria-label="Telegram" class="social__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 3.5L2.9 10.8c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.9L23.9 4.9c.3-1.4-.5-2-2.3-1.4zM8.4 13.3l10-6.3c.5-.3.9-.1.5.2l-8.4 7.6-.3 3.4-1.8-4.9z"/></svg></a>
+      </div>
+
+      <div class="footer__nav">
+        <div class="footer__nav-col footer__nav-col--brand">
+          <h4>Навигация</h4>
+          <p>Кварцевый песок от производителя, по ГОСТУ: фракции 0,1–5 мм</p>
+        </div>
+        <div class="footer__nav-col">
+          <h4>Каталог</h4>
+          <a href="#">Кварцевый песок</a>
+          <a href="gravel.html">Кварцевый гравий</a>
+          <a href="#">Фракции кварцевого песка</a>
+          <a href="#">Песок строительный</a>
+          <a href="#">Холодный асфальт</a>
+        </div>
+        <div class="footer__nav-col">
+          <h4>Правовая информация</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Сертификаты</a>
+          <a href="#">Отзывы</a>
+          <a href="#">Инновации</a>
+          <a href="#">Политика конфиденциальности</a>
+        </div>
+        <div class="footer__nav-col">
+          <h4>Разделы сайта</h4>
+          <a href="prices.html">Цены</a>
+          <a href="#">Производство</a>
+          <a href="#">Доставка</a>
+          <a href="#">О компании</a>
+          <a href="#">Контакты</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom-line"></div>
+      <p class="footer__copy">© 2026 ТД ТехноКварц. Все права защищены</p>
+    </div>
+  </div>
+</footer> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
