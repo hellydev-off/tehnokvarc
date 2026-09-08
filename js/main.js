@@ -166,8 +166,72 @@ document.querySelectorAll('input[type="tel"]').forEach((input) => {
   });
 });
 
+// Прокрутка горизонтальных треков мышью/пальцем (drag), на случай если
+// браузер/устройство не подхватывает нативный touch-scroll
+function enableDragScroll(el) {
+  let isDown = false;
+  let startX = 0;
+  let startScroll = 0;
+  let moved = false;
+
+  const start = (clientX) => {
+    isDown = true;
+    moved = false;
+    startX = clientX;
+    startScroll = el.scrollLeft;
+    el.classList.add('is-dragging');
+    el.style.scrollBehavior = 'auto'; // инлайн — применяется сразу, без ожидания пересчёта стилей
+  };
+  const move = (clientX) => {
+    if (!isDown) return;
+    const dx = clientX - startX;
+    if (Math.abs(dx) > 4) moved = true;
+    el.scrollLeft = startScroll - dx;
+  };
+  const stop = () => {
+    isDown = false;
+    el.classList.remove('is-dragging');
+    el.style.scrollBehavior = '';
+  };
+
+  // мышь (в т.ч. трекпад-драг в devtools) — слушаем move/up на document,
+  // чтобы драг не срывался, если курсор выходит за пределы трека
+  el.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) return;
+    start(e.clientX);
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', (e) => move(e.clientX));
+  document.addEventListener('mouseup', stop);
+
+  // touch — на случай, если браузер не подхватывает нативный touch-scroll
+  el.addEventListener(
+    'touchstart',
+    (e) => start(e.touches[0].clientX),
+    { passive: true }
+  );
+  el.addEventListener('touchmove', (e) => move(e.touches[0].clientX), {
+    passive: true,
+  });
+  el.addEventListener('touchend', stop);
+  el.addEventListener('touchcancel', stop);
+
+  // не даём клику по ссылке/кнопке сработать сразу после перетаскивания
+  el.addEventListener(
+    'click',
+    (e) => {
+      if (moved) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    },
+    true
+  );
+}
+
 // Слайдер карточек (напр. «Лидеры продаж»): бесконечная прокрутка стрелками
 document.querySelectorAll('[data-slider-track]').forEach((track) => {
+  enableDragScroll(track);
   const section = track.closest('section');
   const prev = section?.querySelector('[data-slider-prev]');
   const next = section?.querySelector('[data-slider-next]');
@@ -208,6 +272,7 @@ document.querySelectorAll('[data-slider-track]').forEach((track) => {
 // Галерея фото: бесконечная прокрутка стрелками (набор фото зациклен)
 document.querySelectorAll('.gallery').forEach((gallery) => {
   const track = gallery.querySelector('.gallery__track');
+  enableDragScroll(track);
   const prev = gallery.querySelector('.gallery__arrow--prev');
   const next = gallery.querySelector('.gallery__arrow--next');
   const imgs = track.querySelectorAll('img');

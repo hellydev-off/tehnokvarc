@@ -41,6 +41,13 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+}
+.gravel-grid--slider.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
 }
 .gravel-grid--slider::-webkit-scrollbar {
   display: none;
@@ -350,6 +357,13 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+}
+.gallery__track.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
 }
 .gallery__track::-webkit-scrollbar {
   display: none;

@@ -239,4 +239,29 @@
   .timeline__item::before {
     left: -32px;
   }
+  .pack-actions {
+    flex-direction: column;
+  }
+  .pack-actions__btn {
+    flex: none;
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+  .price-badge {
+    white-space: normal;
+  }
+  .page-head__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-head__title {
+    font-size: 24px;
+  }
+  .price-badge {
+    font-size: 15px;
+    padding: 16px 20px;
+  }
 }
