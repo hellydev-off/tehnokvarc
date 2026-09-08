@@ -415,6 +415,13 @@
     padding: 28px 20px;
     gap: 28px;
   }
+  .cert-slider {
+    justify-content: center;
+    align-self: center;
+  }
+  .cert-banner__cards {
+    justify-content: center;
+  }
   .cert-banner__text {
     text-align: center;
   }
@@ -439,5 +446,36 @@
   .cert-banner__card--next {
     width: 120px;
     margin-left: -50px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "track track" "prev next";
+    gap: 16px;
+  }
+  .gallery--bleed {
+    padding: 0 20px;
+  }
+  .gallery--bleed .gallery__track {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .gallery__track {
+    grid-area: track;
+    scroll-snap-type: x mandatory;
+  }
+  .gallery__track img {
+    width: calc(100vw - 40px);
+    max-width: 460px;
+    height: 260px;
+    scroll-snap-align: start;
+  }
+  .gallery__arrow--prev {
+    grid-area: prev;
+    justify-self: end;
+  }
+  .gallery__arrow--next {
+    grid-area: next;
+    justify-self: start;
   }
 }
