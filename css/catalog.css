@@ -412,10 +412,32 @@
   }
   .cert-banner {
     flex-direction: column;
+    padding: 28px 20px;
+    gap: 28px;
+  }
+  .cert-banner__text {
     text-align: center;
+  }
+  .cert-banner__text h2 {
+    justify-content: center;
+    font-size: 26px;
   }
   .cert-banner__text p {
     margin-left: auto;
     margin-right: auto;
+  }
+  .cert-banner__card {
+    width: 150px;
+  }
+  .cert-banner__card--main {
+    width: 170px;
+  }
+  .cert-banner__card--prev {
+    width: 120px;
+    margin-right: -50px;
+  }
+  .cert-banner__card--next {
+    width: 120px;
+    margin-left: -50px;
   }
 }
