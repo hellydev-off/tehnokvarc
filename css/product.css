@@ -170,3 +170,42 @@
   display: flex;
   gap: 10px;
 }
+
+@media (max-width: 900px) {
+  .product {
+    gap: 32px;
+  }
+  .product__gallery {
+    flex: 1 1 100%;
+  }
+  .product__info {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product__info h1 {
+    font-size: 24px;
+  }
+  .product__prices b {
+    font-size: 24px;
+  }
+  .product__order {
+    width: 100%;
+    padding: 16px 24px;
+  }
+  .tabs__head {
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tabs__head::-webkit-scrollbar {
+    display: none;
+  }
+  .tabs__tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 15px;
+  }
+}
